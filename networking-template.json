@@ -1,6 +1,22 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
+  "parameters": {
+    "nsgName": {
+      "type": "string",
+      "defaultValue": "myNetworkSecurityGroup",
+      "metadata": {
+        "description": "The name of the Network Security Group"
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "East US",
+      "metadata": {
+        "description": "The location for the resources"
+      }
+    }
+  },
   "resources": [
     {
       "type": "Microsoft.Network/networkSecurityGroups",
