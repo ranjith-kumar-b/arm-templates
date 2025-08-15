@@ -36,7 +36,7 @@
       "location": "[parameters('location')]",
       "properties": {
         "sku": {
-          "name": "[parameters('accountType')]"
+          "name": "[parameters('accountType')]"  # Using the correct parameter for accountType
         },
         "kind": "StorageV2"
       }
