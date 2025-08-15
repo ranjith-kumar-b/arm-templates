@@ -15,6 +15,17 @@
       "metadata": {
         "description": "The location where the storage account will be created"
       }
+    },
+    "accountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Premium_LRS"
+      ],
+      "metadata": {
+        "description": "The type of the storage account"
+      }
     }
   },
   "resources": [
@@ -25,7 +36,7 @@
       "location": "[parameters('location')]",
       "properties": {
         "sku": {
-          "name": "Standard_LRS"
+          "name": "[parameters('accountType')]"
         },
         "kind": "StorageV2"
       }
