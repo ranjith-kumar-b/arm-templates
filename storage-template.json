@@ -1,6 +1,22 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": {
+      "type": "string",
+      "defaultValue": "mystorageaccount",
+      "metadata": {
+        "description": "The name of the storage account"
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "East US",
+      "metadata": {
+        "description": "The location where the storage account will be created"
+      }
+    }
+  },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
